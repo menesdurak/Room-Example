@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.menesdurak.roomexample.R
 import com.menesdurak.roomexample.databinding.FragmentDictionaryBinding
 
@@ -22,6 +23,13 @@ class DictionaryFragment : Fragment() {
         _binding = FragmentDictionaryBinding.inflate(inflater, container, false)
         val view = binding.root
         return view
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding.btnGoToAdd.setOnClickListener {
+            findNavController().navigate(R.id.addWordFragment)
+        }
     }
 
     override fun onDestroyView() {
