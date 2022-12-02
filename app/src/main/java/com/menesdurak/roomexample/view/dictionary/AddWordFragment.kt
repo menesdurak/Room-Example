@@ -1,16 +1,17 @@
-package com.menesdurak.roomexample.view
+package com.menesdurak.roomexample.view.dictionary
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.fragment.findNavController
 import com.menesdurak.roomexample.R
+import com.menesdurak.roomexample.databinding.FragmentAddWordBinding
 import com.menesdurak.roomexample.databinding.FragmentDictionaryBinding
 
-class DictionaryFragment : Fragment() {
-    private var _binding: FragmentDictionaryBinding? = null
+class AddWordFragment : Fragment() {
+
+    private var _binding: FragmentAddWordBinding? = null
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
@@ -20,20 +21,14 @@ class DictionaryFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentDictionaryBinding.inflate(inflater, container, false)
+        _binding = FragmentAddWordBinding.inflate(inflater, container, false)
         val view = binding.root
         return view
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        binding.btnGoToAdd.setOnClickListener {
-            findNavController().navigate(R.id.addWordFragment)
-        }
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
+
 }

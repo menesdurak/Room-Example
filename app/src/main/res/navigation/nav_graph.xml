@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/dictionaryFragment"
-        android:name="com.menesdurak.roomexample.view.DictionaryFragment"
+        android:name="com.menesdurak.roomexample.view.dictionary.DictionaryFragment"
         android:label="fragment_dictionary"
         tools:layout="@layout/fragment_dictionary" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/addWordFragment"
-        android:name="com.menesdurak.roomexample.view.AddWordFragment"
+        android:name="com.menesdurak.roomexample.view.dictionary.AddWordFragment"
         android:label="fragment_add_word"
         tools:layout="@layout/fragment_add_word" >
         <action
