@@ -1,14 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".view.dictionary.AddWordFragment">
 
-    <TextView
+    <EditText
+        android:id="@+id/etAddName"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="ADD"
-        android:textSize="40sp"/>
+        android:layout_height="wrap_content"
+        android:hint="Name"/>
 
-</FrameLayout>
+    <EditText
+        android:id="@+id/etAddMeaning"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Meaning"/>
+
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add"/>
+
+
+</LinearLayout>

@@ -6,8 +6,6 @@ import com.menesdurak.roomexample.model.Word
 
 class WordRepository(private val wordDao: WordDao) {
 
-    fun getAllWords(): LiveData<List<Word>> = wordDao.getAllWords()
-
     suspend fun addWord(word: Word) {
         wordDao.addWord(word)
     }
@@ -23,4 +21,6 @@ class WordRepository(private val wordDao: WordDao) {
     suspend fun deleteAllWords() {
         wordDao.deleteAllWords()
     }
+
+    fun getAllWords(): LiveData<List<Word>> = wordDao.getAllWords()
 }

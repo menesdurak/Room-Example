@@ -8,6 +8,7 @@ import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import androidx.room.Update
 import com.menesdurak.roomexample.model.Word
+import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface WordDao {
@@ -26,4 +27,5 @@ interface WordDao {
 
     @Query("DELETE FROM words_table")
     suspend fun deleteAllWords()
+
 }
